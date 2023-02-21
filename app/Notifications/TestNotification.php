@@ -36,8 +36,7 @@ class TestNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage())
             ->line('The tenant id: '.tenant()->id)
-            ->line('Mail from configs: '.config('mail.from.name').' - '.config('mail.from.address'))
-            ->action('Notification Action', url('/'))
-            ->line('Thank you for using our application!');
+            ->line('Mail from name: '.config('mail.from.name'))
+            ->line('Mail from address: '.config('mail.from.address'));
     }
 }

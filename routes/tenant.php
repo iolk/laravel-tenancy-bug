@@ -1,18 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Log;
+declare(strict_types=1);
+
 use Illuminate\Support\Facades\Route;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Tenant Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Here you can register the tenant routes for your application.
+| These routes are loaded by the TenantRouteServiceProvider.
+|
+| Feel free to customize them however you want. Good luck!
 |
 */
 

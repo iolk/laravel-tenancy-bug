@@ -35,11 +35,20 @@ return [
         ],
 
         'database' => [
+            'connection' => 'pgsql',
             'driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
             'after_commit' => false,
+        ],
+
+        'central' => [
+            'driver' => 'database',
+            'table' => 'jobs',
+            'queue' => 'default',
+            'retry_after' => 90,
+            'central' => true,
         ],
 
         'beanstalkd' => [

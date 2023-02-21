@@ -103,6 +103,11 @@ class TenancyServiceProvider extends ServiceProvider
         $this->mapRoutes();
 
         $this->makeTenancyMiddlewareHighestPriority();
+
+        \Stancl\Tenancy\Features\TenantConfig::$storageToConfigMap = [
+            'mail_from_name' => 'mail.from.name',
+            'mail_from_address' => 'mail.from.address',
+        ];
     }
 
     protected function bootEvents()

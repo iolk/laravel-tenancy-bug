@@ -11,4 +11,13 @@ class Tenant extends BaseTenant implements TenantWithDatabase
 {
     use HasDatabase;
     use HasDomains;
+
+    public static function getCustomColumns(): array
+    {
+        return [
+            'id',
+            'mail_from_name',
+            'mail_from_address',
+        ];
+    }
 }
